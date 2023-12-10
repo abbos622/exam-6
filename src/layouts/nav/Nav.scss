@@ -1,0 +1,34 @@
+.all-category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+        font-weight: 600;
+        font-family: var(--font);
+    }
+    span {
+        color: #00000050;
+        margin-bottom: 10px;
+    }
+}
+
+.drop-category,
+.drop-tag__category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+        color: #00000050;
+        margin-bottom: 10px;
+    }
+    a {
+        font-weight: 400;
+        font-family: var(--font);
+    }
+}
+
+.drop-category {
+    a {
+        font-weight: 600;
+    }
+}
