@@ -5,8 +5,10 @@ import { FaShoppingCart } from "react-icons/fa";
 import "./Header.scss";
 import Img from "../../assets/images/website_logo.webp";
 import Nav from "../nav/Nav";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const dataCard = useSelector((state) => state.cart_products);
   return (
     <header>
       <div className="header">
@@ -49,7 +51,7 @@ const Header = () => {
             <Link to="liked">{<FcLike />}</Link>
             <div className="header-cart">
               <Link to="cart">{<FaShoppingCart />}</Link>
-              <span>10</span>
+              <span>{dataCard.cart_products.length}</span>
             </div>
           </div>
         </div>

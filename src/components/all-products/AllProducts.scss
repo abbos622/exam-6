@@ -68,7 +68,7 @@
         background: none;
         font-size: 30px;
         cursor: pointer;
-        color: #fff;
+        // color: red;
     }
 }
 
@@ -77,4 +77,25 @@
     top: -60px;
     z-index: 99;
     background: rgba(0, 0, 0, 0.747);
+}
+
+.none {
+    display: none;
+}
+
+.total {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.cart-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.like-true {
+    color: red !important;
 }

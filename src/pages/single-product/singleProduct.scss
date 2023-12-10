@@ -1,0 +1,21 @@
+.single-product {
+    margin-top: 50px;
+}
+
+.single-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.single-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    overflow: hidden;
+}
+
+.single-price {
+    font-style: 25px !important;
+}

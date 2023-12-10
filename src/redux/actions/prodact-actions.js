@@ -15,7 +15,8 @@
          .then(response => {
              dispatch(load_products(response.data))
          })
-         .catch(err => console.log(err))
+         .catch(err => console.error(err))
+
  }
 
  export { loadProducts }

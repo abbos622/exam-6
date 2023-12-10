@@ -4,36 +4,45 @@ import { connect, useSelector } from "react-redux";
 import { Container } from "../../utils/index";
 import { Link } from "react-router-dom";
 import { IoCartSharp } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import "./AllProducts.scss";
 
 const AllProducts = (props) => {
   const data = useSelector((state) => state.all_products);
   const [number, setNumber] = useState(10);
 
+  // const cartproducts = useSelector((state) => state.cart_products);
+  const dispaatch = useDispatch();
+
+  const likeData = useSelector(state => state.cart_like)
+
   const handleNum = (e) => {
     if (data.all_products.length > number) {
       setNumber(number + 10);
     }
+    else{
+      e.target.classList.add("none")
+    }
   };
 
   const handleLike = (product) => {
-    console.log(product);
+    dispaatch({type: 'LIKE_CART', product})
   };
 
   const handleCart = (product) => {
-    console.log(product);
+    product.count = 1;
+    dispaatch({ type: "ADD_TO_CART", product });
   };
 
-  console.log(data);
+  
   useEffect(() => {
-    props.loadProducts("/products.json");
+    props.loadProducts("/products.json?product_type=blush");
   }, []);
   return (
     <Container>
       <div className="all-products">
         {data.all_products
-          .filter((k) => k.name.includes(""))
           .slice(0, number)
           .map((data) => (
             <div className="all__product-card" key={data.id}>
@@ -50,10 +59,10 @@ const AllProducts = (props) => {
                   {data.price_sign} {data.price ? data.price : "Free"}
                 </strong>
                 <div className="all__products-div">
-                  <button onClick={()=>handleLike(data.name)}>
-                    <FaRegHeart />
+                  <button onClick={() => handleLike(data)} className={likeData.cart_like.findIndex(product => product.id === data.id)  !== -1 ? "like-true" : ""}>
+                    <FaHeart />
                   </button>
-                  <button onClick={()=>handleCart(data.name)}>
+                  <button onClick={() => handleCart(data)}>
                     <IoCartSharp />
                   </button>
                 </div>

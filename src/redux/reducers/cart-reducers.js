@@ -9,7 +9,8 @@ function checkDecrement(count) {
     return count
 }
 const cartReducer = (state = initialState, action) => {
-    const product_index = state.cart_products.findIndex(product => product.product_id === action.product.product_id)
+    console.log(action)
+    const product_index = state.cart_products.findIndex(product => product.id === action.product.id)
     switch (action.type) {
         case "ADD_TO_CART":
             let newcart = state.cart_products;
