@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 import { IoCartSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom/dist";
 import "./AllProducts.scss";
 
 const AllProducts = (props) => {
   const data = useSelector((state) => state.all_products);
   const [number, setNumber] = useState(10);
 
+  const url = useParams()
+
+  console.log(url);
   // const cartproducts = useSelector((state) => state.cart_products);
   const dispaatch = useDispatch();
 
@@ -37,16 +41,14 @@ const AllProducts = (props) => {
 
   
   useEffect(() => {
-    props.loadProducts("/products.json?product_type=blush");
+    props.loadProducts("/products.jsonn");
   }, []);
   return (
     <Container>
       <div className="all-products">
-        {data.all_products
-          .slice(0, number)
-          .map((data) => (
+        {data.all_products?.slice(0, number).map((data) => (
             <div className="all__product-card" key={data.id}>
-              <Link to={`/${data.id}`} className="all__product-img">
+              <Link to={`/products/${data.id}`} className="all__product-img">
                 <img width={200} src={data.api_featured_image} alt="" />
               </Link>
               <div className="all-products-text">

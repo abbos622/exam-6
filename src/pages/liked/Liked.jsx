@@ -24,7 +24,7 @@ const Liked = () => {
         <div className="all-products">
           {data.cart_like.map((data) => (
             <div className="all__product-card" key={data.id}>
-              <Link to={`/${data.id}`} className="all__product-img">
+              <Link to={`/products/${data.id}`} className="all__product-img">
                 <img width={200} src={data.api_featured_image} alt="" />
               </Link>
               <div className="all-products-text">

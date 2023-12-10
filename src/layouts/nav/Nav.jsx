@@ -13,40 +13,40 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=blush">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Powder</Link>
-                <Link to="/">Cream</Link>
+                <Link to="/products.json?product_category=powder&product_type=blush">Powder</Link>
+                <Link to="//products.json?product_category=cream&product_type=blush">Cream</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Vegan</Link>
-                <Link to="/">Gluten free</Link>
-                <Link to="/">Canadian</Link>
+                <Link to="/products.json?product_tags=Vegan&product_type=blush">Vegan</Link>
+                <Link to="/products.json?product_tags=Gluten+Free&product_type=blush">Gluten free</Link>
+                <Link to="/products.json?product_tags=Canadian&product_type=blush">Canadian</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Natural</Link>
-                <Link to="/">Non-gmo</Link>
-                <Link to="/">Purpicks</Link>
+                <Link to="/products.json?product_tags=Natural&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Non-gmo</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Purpicks</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Unda organic</Link>
-                <Link to="/">Organic</Link>
-                <Link to="/">Certclean</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Unda organic</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Organic</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Certclean</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Ewg verified</Link>
-                <Link to="/">Hoypollargenic</Link>
-                <Link to="/">No talc</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Ewg verified</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Hoypollargenic</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">No talc</Link>
               </div>
             </div>
           </div>
@@ -56,30 +56,30 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=bronzer">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Powder</Link>
+                <Link to="/products.json?product_tags=Non-GMO&product_type=blush">Powder</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Gluten free</Link>
-                <Link to="/">Canadian</Link>
-                <Link to="/">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Organic</Link>
-                <Link to="/">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Organic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Purpicks</Link>
-                <Link to="/">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
               </div>
             </div>
           </div>
@@ -89,17 +89,17 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Pencil</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Pencil</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Ewg verified</Link>
-                <Link to="/">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
               </div>
             </div>
           </div>
@@ -109,17 +109,17 @@ const Nav = () => {
             <div className="dropdown-content">
             <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Pencil</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Pencil</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Ewg verified</Link>
-                <Link to="/">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
 
               </div>
             </div>
@@ -130,37 +130,37 @@ const Nav = () => {
             <div className="dropdown-content">
             <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Liquid</Link>
-                <Link to="/">Pencil</Link>
-                <Link to="/">Gel</Link>
-                <Link to="/">Cream</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Liquid</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Pencil</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gel</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Cream</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Vegan</Link>
-                <Link to="/">Natural</Link>
-                <Link to="/">Canadian</Link>
-                <Link to="/">Gluten free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten free</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Organic</Link>
-                <Link to="/">Purpicks</Link>
-                <Link to="/">Certclean</Link>
-                <Link to="/">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Organic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Certclean</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Hypoallergenic</Link>
-                <Link to="/">No talc</Link>
-                <Link to="/">Ecocert</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Hypoallergenic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">No talc</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ecocert</Link>
               </div>
             </div>
           </div>
@@ -170,44 +170,44 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Concealer</Link>
-                <Link to="/">Liquid</Link>
-                <Link to="/">Contour</Link>
-                <Link to="/">Bb cc</Link>
-                <Link to="/">Cream</Link>
-                <Link to="/">Mineral</Link>
-                <Link to="/">Powder</Link>
-                <Link to="/">Highlighter</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Concealer</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Liquid</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Contour</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Bb cc</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Cream</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Mineral</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Powder</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Highlighter</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Vegan</Link>
-                <Link to="/">Canadian</Link>
-                <Link to="/">Natural</Link>
-                <Link to="/">Gluten free</Link>
-                <Link to="/">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Certclean</Link>
-                <Link to="/">Ewg verified</Link>
-                <Link to="/">Hypoallergenic</Link>
-                <Link to="/">No talc</Link>
-                <Link to="/">Water free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Certclean</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Hypoallergenic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">No talc</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Water free</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Cruelty free</Link>
-                <Link to="/">Alcohol free</Link>
-                <Link to="/">Oil free</Link>
-                <Link to="/">Silicone free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Cruelty free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Alcohol free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Oil free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Silicone free</Link>
               </div>
             </div>
           </div>
@@ -217,32 +217,32 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Pencil</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Pencil</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Natural</Link>
-                <Link to="/">Vegan</Link>
-                <Link to="/">Gluten free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten free</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Canadian</Link>
-                <Link to="/">Purpicks</Link>
-                <Link to="/">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Hypoallergenic</Link>
-                <Link to="/">No talc</Link>
-                <Link to="/">Cruelty free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Hypoallergenic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">No talc</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Cruelty free</Link>
               </div>
             </div>
           </div>
@@ -252,44 +252,44 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               <div className="drop-category">
                 <span>Category</span>
-                <Link to="/">Lipstick</Link>
-                <Link to="/">Lip gloss</Link>
-                <Link to="/">Liquid</Link>
-                <Link to="/">Lip stain - JSON</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Lipstick</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Lip gloss</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Liquid</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Lip stain - JSON</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Canadian</Link>
-                <Link to="/">Natural</Link>
-                <Link to="/">Gluten free</Link>
-                <Link to="/">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Non-gmo</Link>
-                <Link to="/">Peanut free product</Link>
-                <Link to="/">Cruelty free</Link>
-                <Link to="/">Organic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Non-gmo</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Peanut free product</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Cruelty free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Organic</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Purpicks</Link>
-                <Link to="/">Certclean</Link>
-                <Link to="/">Chemical free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Certclean</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Chemical free</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Ewg verified</Link>
-                <Link to="/">Hypoallergenic</Link>
-                <Link to="/">No talc</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Hypoallergenic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">No talc</Link>
               </div>
             </div>
           </div>
@@ -299,43 +299,43 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Natural</Link>
-                <Link to="/">Gluten free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten free</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Vegan</Link>
-                <Link to="/">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Organic</Link>
-                <Link to="/">Purpicks</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Organic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Purpicks</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Ewg verified</Link>
-                <Link to="/">Hypoallergenic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ewg verified</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Hypoallergenic</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">No talc</Link>
-                <Link to="/">Ecocert</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">No talc</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Ecocert</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Usda organic</Link>
-                <Link to="/">Certclean</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Usda organic</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Certclean</Link>
               </div>
             </div>
           </div>
@@ -345,31 +345,31 @@ const Nav = () => {
             <div className="dropdown-content">
               <div className="all-category">
                 <span>All </span>
-                <Link to="/">All product</Link>
+                <Link to="/products.json?product_type=eyebrow">All product</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Vegan</Link>
-                <Link to="/">Canadian</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Vegan</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Canadian</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Natural</Link>
-                <Link to="/">Gluten</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Natural</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Gluten</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Fair trade</Link>
-                <Link to="/">Sugar free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Fair trade</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Sugar free</Link>
               </div>
               {/* tag */}
               <div className="drop-tag__category">
                 <span>Tag</span>
-                <Link to="/">Non-gmo</Link>
-                <Link to="/">Dairy free</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Non-gmo</Link>
+                <Link to="/products.json?product_tags=No+Talc&product_type=blush">Dairy free</Link>
               </div>
             </div>
           </div>

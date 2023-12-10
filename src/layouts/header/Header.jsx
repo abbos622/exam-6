@@ -48,9 +48,9 @@ const Header = () => {
           </div>
 
           <div className="add-to">
-            <Link to="liked">{<FcLike />}</Link>
+            <Link to="/liked">{<FcLike />}</Link>
             <div className="header-cart">
-              <Link to="cart">{<FaShoppingCart />}</Link>
+              <Link to="/cart">{<FaShoppingCart />}</Link>
               <span>{dataCard.cart_products.length}</span>
             </div>
           </div>

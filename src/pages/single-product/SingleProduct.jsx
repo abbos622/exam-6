@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import Header from "../../layouts/header/Header";
-import { loadProducts } from "../../redux/actions/prodact-actions";
+// import { loadProducts } from "../../redux/actions/prodact-actions";
 import { connect, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 import "./singleProduct.scss";
 import { Container } from "../../utils";
+import { errorProducts } from "../../redux/actions/error-actions";
 
 const SingleProduct = (props) => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const SingleProduct = (props) => {
   console.log(product);
 
   useEffect(() => {
-    props.loadProducts(`/products/${id}.json`);
+    props.errorProducts(`/products/${id}.json`);
   }, []);
 
  return (
@@ -34,7 +35,7 @@ const SingleProduct = (props) => {
               <strong className="single-price">
                 {product.price_sign} {product?.price}
               </strong>
-              <p>{parse(product?.description)}</p>
+              <p>{product.description}</p>
               </div>
             </div>
           </Container>
@@ -45,4 +46,4 @@ const SingleProduct = (props) => {
   ) 
 };
 
-export default connect(null, { loadProducts })(SingleProduct);
+export default connect(null, { errorProducts })(SingleProduct);
