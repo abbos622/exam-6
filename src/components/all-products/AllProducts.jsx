@@ -13,22 +13,21 @@ const AllProducts = (props) => {
   const data = useSelector((state) => state.all_products);
   const [number, setNumber] = useState(10);
 
-
   const dispaatch = useDispatch();
 
-  const likeData = useSelector(state => state.cart_like)
-
+  const likeData = useSelector((state) => state.cart_like);
+  const { cart_products } = useSelector((state) => state.cart_products);
+  
   const handleNum = (e) => {
     if (data.all_products.length > number) {
       setNumber(number + 10);
-    }
-    else{
-      e.target.classList.add("none")
+    } else {
+      e.target.classList.add("none");
     }
   };
 
   const handleLike = (product) => {
-    dispaatch({type: 'LIKE_CART', product})
+    dispaatch({ type: "LIKE_CART", product });
   };
 
   const handleCart = (product) => {
@@ -36,7 +35,6 @@ const AllProducts = (props) => {
     dispaatch({ type: "ADD_TO_CART", product });
   };
 
-  
   useEffect(() => {
     props.loadProducts("/products.json");
   }, []);
@@ -44,30 +42,48 @@ const AllProducts = (props) => {
     <Container>
       <div className="all-products">
         {data?.all_products?.slice(0, number).map((data) => (
-            <div className="all__product-card" key={data.id}>
-              <Link to={`/products/${data.id}`} className="all__product-img">
-                <img width={200} src={data.api_featured_image} alt="" />
-              </Link>
-              <div className="all-products-text">
-                <h2>
-                  {data.name.length > 26
-                    ? data.name.slice(0, 26) + "..."
-                    : data.name}
-                </h2>
-                <strong>
-                  {data.price_sign} {data.price ? data.price : "Free"}
-                </strong>
-                <div className="all__products-div">
-                  <button onClick={() => handleLike(data)} className={likeData.cart_like.findIndex(product => product.id === data.id)  !== -1 ? "like-true" : ""}>
-                    <FaHeart />
-                  </button>
-                  <button onClick={() => handleCart(data)}>
-                    <IoCartSharp />
-                  </button>
-                </div>
+          <div className="all__product-card" key={data.id}>
+            <Link to={`/products/${data.id}`} className="all__product-img">
+              <img width={200} src={data.api_featured_image} alt="" />
+            </Link>
+            <div className="all-products-text">
+              <h2>
+                {data.name.length > 26
+                  ? data.name.slice(0, 26) + "..."
+                  : data.name}
+              </h2>
+              <strong>
+                {data.price_sign} {data.price ? data.price : "Free"}
+              </strong>
+              <div className="all__products-div">
+                <button
+                  onClick={() => handleLike(data)}
+                  className={
+                    likeData.cart_like.findIndex(
+                      (product) => product.id === data.id
+                    ) !== -1
+                      ? "like-true"
+                      : ""
+                  }
+                >
+                  <FaHeart />
+                </button>
+                <button
+                  onClick={() => handleCart(data)}
+                  className={
+                    cart_products.findIndex(
+                      (product) => product.id === data.id
+                    ) !== -1
+                      ? "cart-true"
+                      : ""
+                  }
+                >
+                  <IoCartSharp />
+                </button>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
 
         <button className="more-btn" onClick={handleNum}>
           More Product🔽

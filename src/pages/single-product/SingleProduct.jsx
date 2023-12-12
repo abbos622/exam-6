@@ -41,7 +41,7 @@ const SingleProduct = (props) => {
               <strong className="single-price">
                 {product?.price_sign} {product?.price}
               </strong>
-              <p className="single-category">{parse(product?.description)}</p>
+              {/* <p className="single-category">{parse(product?.description)}</p> */}
             </div>
           </div>
         </Container>
