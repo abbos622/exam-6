@@ -11,23 +11,16 @@ import { useParams } from "react-router-dom/dist";
 import Header from "../../layouts/header/Header";
 
 const SingleCategory = (props) => {
-  const data = useSelector((state) => state.all_products);
-  const [number, setNumber] = useState(10);
-  console.log(data);
+  const data = useSelector((state) => state.error);
+  console.log(data.all_products);
 
-  const url = useParams();
+  const {url} = useParams();
+  console.log(url);
 
   const dispaatch = useDispatch();
 
   const likeData = useSelector((state) => state.cart_like);
 
-  const handleNum = (e) => {
-    if (data.all_products.length > number) {
-      setNumber(number + 10);
-    } else {
-      e.target.classList.add("none");
-    }
-  };
 
   const handleLike = (product) => {
     dispaatch({ type: "LIKE_CART", product });
@@ -38,15 +31,15 @@ const SingleCategory = (props) => {
     dispaatch({ type: "ADD_TO_CART", product });
   };
 
-  // useEffect(() => {
-  //   props.errorProducts(url);
-  // }, []);
+  useEffect(() => {
+    props.errorProducts(`products.json?${url}`);
+  }, [url]);
   return (
     <>
-      <Header>
+      <Header/>
         <Container>
           <div className="all-products">
-            {data.all_products?.map((data) => (
+            {data?.all_products.map((data) => (
               <div className="all__product-card" key={data.id}>
                 <Link to={`/products/${data.id}`} className="all__product-img">
                   <img width={200} src={data.api_featured_image} alt="" />
@@ -80,13 +73,8 @@ const SingleCategory = (props) => {
                 </div>
               </div>
             ))}
-
-            <button className="more-btn" onClick={handleNum}>
-              More Product🔽
-            </button>
           </div>
         </Container>
-      </Header>
     </>
   );
 };

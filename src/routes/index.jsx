@@ -11,7 +11,7 @@ const RouteController = () => {
         <Route path="/liked" element={<Liked/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/products/:id" element={<SingleProduct/>}/>
-        <Route path="/:id" element={<SingleCategory/>}/>
+        <Route path="/:url" element={<SingleCategory/>}/>
     </Routes>
   )
 }

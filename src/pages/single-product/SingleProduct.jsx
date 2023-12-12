@@ -1,49 +1,53 @@
 import React, { useEffect } from "react";
 import Header from "../../layouts/header/Header";
-// import { loadProducts } from "../../redux/actions/prodact-actions";
 import { connect, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-// import parse from "html-react-parser";
+import parse from "html-react-parser";
 import "./singleProduct.scss";
 import { Container } from "../../utils";
 import { errorProducts } from "../../redux/actions/error-actions";
 
 const SingleProduct = (props) => {
   const { id } = useParams();
-  const data = useSelector((state) => state.all_products);
+  const data = useSelector((state) => state.error);
+
+  console.log(id)
   const product = data.all_products;
   console.log(product);
 
   useEffect(() => {
-    props.errorProducts(`/products/${id}.json`);
+    props.errorProducts(`products/${id}.json`);
   }, []);
 
- return (
+  return (
     <div>
       <Header />
-        <div className="single-product">
-          <Container>
-            <div className="single-card">
-              <div className="single__img">
-                <img width={500} height={200} src={product?.api_featured_image} alt=""/>
-              </div>
-              <div className="">
+      <div className="single-product">
+        <Container>
+          <div className="single-card">
+            <div className="single__img">
+              <img
+                width={500}
+                height={200}
+                src={product?.api_featured_image}
+                alt=""
+              />
+            </div>
+            <div className="single-wrapper">
               <div className="single-title">
-              <h2>{product.name}</h2>
-              <strong className="brand">{product?.brand}</strong>
+                <strong className="brand">{product?.brand}</strong>
+                <h2>{product?.name}</h2>
               </div>
               <strong className="single-price">
-                {product.price_sign} {product?.price}
+                {product?.price_sign} {product?.price}
               </strong>
-              <p>{product.description}</p>
-              </div>
+              <p className="single-category">{parse(product?.description)}</p>
             </div>
-          </Container>
-        </div> 
-        : 
-        <div></div>
+          </div>
+        </Container>
+      </div>
     </div>
-  ) 
+  );
 };
 
 export default connect(null, { errorProducts })(SingleProduct);

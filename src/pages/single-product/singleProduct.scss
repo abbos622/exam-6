@@ -5,17 +5,30 @@
 .single-card {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    gap: 50px;
 }
 
 .single-title {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 800px;
+    align-items: flex-start;
+    max-width: 800px;
     overflow: hidden;
+    text-transform: uppercase;
 }
 
 .single-price {
-    font-style: 25px !important;
+    margin-top: 20px;
+    font-size: 25px !important;
+}
+
+.single-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.single-category {
+    max-width: 400px;
+    margin-top: 50px;
 }
