@@ -4,11 +4,12 @@ import rootReducer from "../reducers";
 
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from "redux-persist/lib/storage"
+import { likeReducers } from "../reducers/likeReducers";
 
 const persistConfig = {
     key: 'rducer',
     storage: storage,
-    whitelist: ["cart_products", "cart_like"]
+    whitelist: ["cart_products", "cart_like", "all_products", "error"]
 }
 
 const presistedReducer = persistReducer(persistConfig, rootReducer);

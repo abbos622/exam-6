@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { loadProducts } from "../../redux/actions/prodact-actions";
+import { errorProducts } from "../../redux/actions/error-actions";
 import { connect, useSelector } from "react-redux";
 import { Container } from "../../utils";
 import { Link } from "react-router-dom";
@@ -12,11 +13,10 @@ import Header from "../../layouts/header/Header";
 const SingleCategory = (props) => {
   const data = useSelector((state) => state.all_products);
   const [number, setNumber] = useState(10);
+  console.log(data);
 
   const url = useParams();
 
-  console.log(url);
-  // const cartproducts = useSelector((state) => state.cart_products);
   const dispaatch = useDispatch();
 
   const likeData = useSelector((state) => state.cart_like);
@@ -38,15 +38,15 @@ const SingleCategory = (props) => {
     dispaatch({ type: "ADD_TO_CART", product });
   };
 
-  useEffect(() => {
-    props.loadProducts("/products.jsonn");
-  }, []);
+  // useEffect(() => {
+  //   props.errorProducts(url);
+  // }, []);
   return (
     <>
       <Header>
         <Container>
           <div className="all-products">
-            {data.all_products?.slice(0, number).map((data) => (
+            {data.all_products?.map((data) => (
               <div className="all__product-card" key={data.id}>
                 <Link to={`/products/${data.id}`} className="all__product-img">
                   <img width={200} src={data.api_featured_image} alt="" />
@@ -91,4 +91,4 @@ const SingleCategory = (props) => {
   );
 };
 
-export default connect(null, { loadProducts })(SingleCategory);
+export default connect(null, { errorProducts })(SingleCategory);

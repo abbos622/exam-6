@@ -13,10 +13,7 @@ const AllProducts = (props) => {
   const data = useSelector((state) => state.all_products);
   const [number, setNumber] = useState(10);
 
-  const url = useParams()
 
-  console.log(url);
-  // const cartproducts = useSelector((state) => state.cart_products);
   const dispaatch = useDispatch();
 
   const likeData = useSelector(state => state.cart_like)
@@ -41,7 +38,7 @@ const AllProducts = (props) => {
 
   
   useEffect(() => {
-    props.loadProducts("/products.jsonn");
+    props.loadProducts("/products.json");
   }, []);
   return (
     <Container>

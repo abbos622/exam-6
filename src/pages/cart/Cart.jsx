@@ -1,10 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Header from "../../layouts/header/Header";
-import { Container } from "../../utils/index";
 import { Link } from "react-router-dom";
-import { IoCartSharp } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa";
 import Nav from "../../layouts/nav/Nav";
 
 const Cart = () => {

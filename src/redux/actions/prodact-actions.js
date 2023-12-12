@@ -12,9 +12,7 @@
 
  const loadProducts = (URL) => async dispatch => {
      axios(URL)
-         .then(response => {
-             dispatch(load_products(response.data))
-         })
+         .then(response => dispatch(load_products(response.data)))
          .catch(err => console.error(err))
 
  }
