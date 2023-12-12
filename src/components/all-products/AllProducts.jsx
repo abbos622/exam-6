@@ -43,7 +43,7 @@ const AllProducts = (props) => {
   return (
     <Container>
       <div className="all-products">
-        {data.all_products?.slice(0, number).map((data) => (
+        {data?.all_products?.slice(0, number).map((data) => (
             <div className="all__product-card" key={data.id}>
               <Link to={`/products/${data.id}`} className="all__product-img">
                 <img width={200} src={data.api_featured_image} alt="" />
