@@ -14,13 +14,13 @@ const SingleCategory = (props) => {
   const data = useSelector((state) => state.error);
   console.log(data.all_products);
 
-  const { url } = useParams();
+  const {url} = useParams();
   console.log(url);
 
   const dispaatch = useDispatch();
 
   const likeData = useSelector((state) => state.cart_like);
-  const { cart_products } = useSelector((state) => state.cart_products);
+  const {cart_products} = useSelector((state) => state.cart_products);
 
   console.log(cart_products);
 
@@ -36,56 +36,48 @@ const SingleCategory = (props) => {
   useEffect(() => {
     props.errorProducts(`products.json?${url}`);
   }, [url]);
+  console.log(data.all_products);
   return (
     <>
-      <Header />
-      <Container>
-        <div className="all-products">
-          {data?.all_products.map((data) => (
-            <div className="all__product-card" key={data.id}>
-              <Link to={`/products/${data.id}`} className="all__product-img">
-                <img width={200} src={data.api_featured_image} alt="" />
-              </Link>
-              <div className="all-products-text">
-                <h2>
-                  {data.name.length > 26
-                    ? data.name.slice(0, 26) + "..."
-                    : data.name}
-                </h2>
-                <strong>
-                  {data.price_sign} {data.price ? data.price : "Free"}
-                </strong>
-                <div className="all__products-div">
-                  <button
-                    onClick={() => handleLike(data)}
-                    className={
-                      likeData.cart_like.findIndex(
-                        (product) => product.id === data.id
-                      ) !== -1
-                        ? "like-true"
-                        : ""
-                    }
-                  >
-                    <FaHeart />
-                  </button>
-                  <button
-                    onClick={() => handleCart(data)}
-                    className={
-                      cart_products.findIndex(
-                        (product) => product.id === data.id
-                      ) !== -1
-                        ? "cart-true"
-                        : ""
-                    }
-                  >
-                    <IoCartSharp />
-                  </button>
+      <Header/>
+        <Container>
+          <div className="all-products">
+            {data?.all_products?.map((data) => (
+              <div className="all__product-card" key={data.id}>
+                <Link to={`/products/${data.id}`} className="all__product-img">
+                  <img width={200} src={data.api_featured_image} alt="" />
+                </Link>
+                <div className="all-products-text">
+                  <h2>
+                    {data.name.length > 26
+                      ? data.name.slice(0, 26) + "..."
+                      : data.name}
+                  </h2>
+                  <strong>
+                    {data.price_sign} {data.price ? data.price : "Free"}
+                  </strong>
+                  <div className="all__products-div">
+                    <button
+                      onClick={() => handleLike(data)}
+                      className={
+                        likeData.cart_like.findIndex(
+                          (product) => product.id === data.id
+                        ) !== -1
+                          ? "like-true"
+                          : ""
+                      }
+                    >
+                      <FaHeart />
+                    </button>
+                    <button onClick={() => handleCart(data)} >
+                      <IoCartSharp />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </Container>
+            ))}
+          </div>
+        </Container>
     </>
   );
 };
